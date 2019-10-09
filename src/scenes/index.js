@@ -5,6 +5,7 @@ import multiSine from "./multiSine";
 import ripple from "./ripple";
 import cylinder from "./cylinder";
 import pulsingSphere from "./pulsingSphere";
+import torus from "./torus";
 
 export default {
   //test scene
@@ -14,5 +15,6 @@ export default {
   multiSine,
   ripple,
   cylinder,
-  pulsingSphere
+  pulsingSphere,
+  torus
 };

@@ -13,17 +13,19 @@ for (let gridElement of gridMesh) {
       initFunc: gridElement.initFunc,
       updateFunc: mesh => {
         const { u, v } = getUVParameters(mesh.i, mesh.j, mesh.boxSize);
-        let r =
-          0.8 +
+        const r1 =
+          0.65 +
           Math.sin(Math.PI * (6 * u + getTimeSinceStart(mesh.startingTime))) *
-            0.1 +
-          Math.sin(Math.PI * (4 * v + getTimeSinceStart(mesh.startingTime))) *
             0.1;
+        const r2 =
+          0.2 +
+          Math.sin(Math.PI * (4 * v + getTimeSinceStart(mesh.startingTime))) *
+            0.05;
 
-        const s = r * Math.cos(Math.PI * 0.5 * v);
+        const s = r2 * Math.cos(Math.PI * v) + r1;
 
         mesh.position.x = s * Math.sin(Math.PI * u);
-        mesh.position.y = r * Math.sin(Math.PI * 0.5 * v);
+        mesh.position.y = r2 * Math.sin(Math.PI * v);
         mesh.position.z = s * Math.cos(Math.PI * u);
 
         mesh.material.color.r = mesh.position.y * 0.5 + 0.5;
@@ -32,19 +34,6 @@ for (let gridElement of gridMesh) {
     })
   );
 }
-
-// const origin = new three.Mesh(
-//   new three.BoxGeometry(1, 1, 1),
-//   new three.MeshBasicMaterial({ color: 0xff0000 })
-// );
-
-// const wrappedOrigin = new ObjectWrapper({
-//   mesh: origin,
-//   initFunc: () => {},
-//   updateFunc: () => {}
-// });
-
-// objects.push(wrappedOrigin);
 
 const scene = new SceneWrapper({
   objects,
