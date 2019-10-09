@@ -34,3 +34,41 @@ export const getUVParameters = (i, j, step) => {
   const v = (j + 0.5) * step - 1;
   return { u, v };
 };
+
+export const sinh = x => {
+  return (Math.pow(Math.E, x) - Math.pow(Math.E, -x)) / 2;
+};
+
+export const cosh = x => {
+  return (Math.pow(Math.E, x) + Math.pow(Math.E, -x)) / 2;
+};
+
+export const generateVerticesGrid = resolution => {
+  const step = 2 / resolution;
+  const vertices = [];
+  for (let i = 0; i < resolution; i++) {
+    for (let j = 0; j < resolution; j++) {
+      const vertex = new three.Vector3(i * step, 0, j * step);
+      vertex.initialY = (Math.random() * (Math.random() > 0.5 ? -1 : 1)) / 10;
+      vertices.push(vertex);
+    }
+  }
+  return vertices;
+};
+
+export const generateFacesFromVertices = resolution => {
+  const faces = [];
+  for (let j = 0; j < resolution - 1; j++) {
+    for (let i = 0; i < resolution - 1; i++) {
+      const n0 = j * resolution + i;
+      const n1 = n0 + 1;
+      const n2 = (j + 1) * resolution + i + 1;
+      const n3 = n2 - 1;
+      const face1 = new three.Face3(n0, n1, n2);
+      const face2 = new three.Face3(n2, n3, n0);
+      faces.push(face1);
+      faces.push(face2);
+    }
+  }
+  return faces;
+};

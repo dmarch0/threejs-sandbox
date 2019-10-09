@@ -6,6 +6,7 @@ import ripple from "./ripple";
 import cylinder from "./cylinder";
 import pulsingSphere from "./pulsingSphere";
 import torus from "./torus";
+import wavy from "./wavySurface";
 
 export default {
   //test scene
@@ -16,5 +17,6 @@ export default {
   ripple,
   cylinder,
   pulsingSphere,
-  torus
+  torus,
+  wavy
 };

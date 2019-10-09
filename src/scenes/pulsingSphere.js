@@ -33,19 +33,6 @@ for (let gridElement of gridMesh) {
   );
 }
 
-// const origin = new three.Mesh(
-//   new three.BoxGeometry(1, 1, 1),
-//   new three.MeshBasicMaterial({ color: 0xff0000 })
-// );
-
-// const wrappedOrigin = new ObjectWrapper({
-//   mesh: origin,
-//   initFunc: () => {},
-//   updateFunc: () => {}
-// });
-
-// objects.push(wrappedOrigin);
-
 const scene = new SceneWrapper({
   objects,
   background: new three.Color("rgb(140, 140, 140)")

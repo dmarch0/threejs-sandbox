@@ -21,7 +21,7 @@ class CanvasWrapper extends React.Component {
   }
   componentDidMount() {
     //create renderer
-    const renderer = new three.WebGLRenderer();
+    const renderer = new three.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(
       this.state.wrapperRef.current.clientWidth,
