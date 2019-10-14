@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/threejs-sandbox/static/js/main.93d0ae3f.chunk.js",
+    "main.js.map": "/threejs-sandbox/static/js/main.93d0ae3f.chunk.js.map",
+    "runtime-main.js": "/threejs-sandbox/static/js/runtime-main.bc906bbb.js",
+    "runtime-main.js.map": "/threejs-sandbox/static/js/runtime-main.bc906bbb.js.map",
+    "static/css/2.764ccc25.chunk.css": "/threejs-sandbox/static/css/2.764ccc25.chunk.css",
+    "static/js/2.a2f0226f.chunk.js": "/threejs-sandbox/static/js/2.a2f0226f.chunk.js",
+    "static/js/2.a2f0226f.chunk.js.map": "/threejs-sandbox/static/js/2.a2f0226f.chunk.js.map",
+    "index.html": "/threejs-sandbox/index.html",
+    "precache-manifest.85a1e2740f37a2a81c9525ee57fe6e5f.js": "/threejs-sandbox/precache-manifest.85a1e2740f37a2a81c9525ee57fe6e5f.js",
+    "service-worker.js": "/threejs-sandbox/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/threejs-sandbox/static/css/2.764ccc25.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc906bbb.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.a2f0226f.chunk.js",
+    "static/js/main.93d0ae3f.chunk.js"
+  ]
+}
