@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52e7f37ce0407b08d3dfa0b06f3a08db",
+    "revision": "516971bff8e924cb0ce701fb83965dcb",
     "url": "/threejs-sandbox/index.html"
   },
   {
